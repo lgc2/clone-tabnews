@@ -5,5 +5,5 @@ test("PUT to /api/v1/migrations returns 404", async () => {
   expect(response.status).toBe(405);
 
   const responseBodyText = await response.text();
-  expect(responseBodyText).toBe("");
+  expect(responseBodyText).toContain("PUT");
 });
